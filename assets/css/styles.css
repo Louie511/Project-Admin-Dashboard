@@ -65,7 +65,11 @@ button:hover {
     width: 4%;
     height: 40%;
     opacity: 0.9;
-    padding-right: 15%;
+    margin-right: 15%;
+}
+
+.hourglass:hover{
+    cursor: pointer;
 }
 
 
@@ -120,7 +124,20 @@ button:hover {
     padding-right: 20%;
 }
 
+.notification {
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+    padding-top: 10%;
+    filter: invert(1);
+    transition: transform 0.4s ease;
+}
 
+.notification:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    
+}
 
 /* SIDE-BAR SECTION */
 
@@ -138,9 +155,18 @@ button:hover {
 }
 
 .sidebar .dashboard {
-    text-align: end;
-    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
     padding-right: 7%;
+}
+
+.dashboard-img {
+    margin-right: 15px;
+    filter: invert(1);
+    width: 20%;
+    height: 20%;
 }
 
 .dash-buttons {
@@ -199,29 +225,47 @@ button img {
 
 /* PROPERTY CONTENT DIVS */
 
-.property-content {
+.project-content {
     display: grid;
     grid-template-columns: 1fr 1fr 0.5fr;
-    grid-template-rows: auto repeat(3, minmax(250px, 2fr));
+    grid-template-rows: 50px repeat(3, 280px);
     gap: 25px;
     padding: 2%;
 }
 
-.properties {
+.projects {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: green;
+    background-color: #FAF9F6;
     display: grid;
-    grid-template-columns: auto 1fr;
     grid-template-rows: repeat(2, 1fr);
+    border-left: 5px solid #b40101;
+    border-radius: 10px;
 }
 
-
-.property-content h3 {
+.project-content h3 {
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
+.projects > div {
+    margin: 5%;
+}
+
+.projects h3 {
+    margin-bottom: 2%;
+}
+
+.project-buttons img:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
 /* ANNOUNCEMENT AND NEWS DIVS */
+
+.announcements-title {
+    grid-column: 3;
+    grid-row: 1;
+}
 
 .announcement-news-div {
     grid-column-start: 3;
@@ -234,16 +278,29 @@ button img {
 
 .announcement-news-div .announcements {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: blueviolet;
-    display: grid;
-    grid-template-rows: auto repeat(2, 1fr);
+    background-color: #FAF9F6;
+    /* display: grid;
+    grid-template-rows: auto repeat(2, 1fr); */
+    border-radius: 10px;
+}
+
+
+.announcements div {
+    padding: 3%;
+}
+
+.announcement-news-div .announcements .latest-announcement {
+    grid-row: 2;
 }
 
 .announcement-news-div .news {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: brown;
+    background-color: #FAF9F6;
     display: grid;
     grid-template-rows: auto repeat(3, 1fr);
+    border-radius: 10px;
 }
 
-
+.news div {
+    padding: 3%;
+}
